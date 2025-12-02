@@ -1,4 +1,4 @@
-1. Add Dockerfile ( you can copy content from Jenkins installation guide)
+1. Add Dockerfile (you can copy content from Jenkins installation guide)
 2. build Jenkins blueocean Docker image - docker build -t myjenkins-blueocean:2.528.2-1 .
 3. Create a bridge network in Docker - docker network create jenkins
 4. run the container. for windows -
@@ -6,3 +6,4 @@
 5. You can access Jenkins on port 8080 (by default, you can check port with docker ps)
 6. Get administrator password - docker exec jenkins-blueocean cat /path/to/initialAdminPassword
 7. Create admin user
+8. You can open terminal inside container - docker exec -it jenkins-blueocean bash. (We can look at Jenkins data, path is specified in docker run command - jenkins-data:/var/jenkins_home, workspaces are stored there)
