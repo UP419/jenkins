@@ -15,4 +15,4 @@
    4. get docker image name from docker hub - jenkins/agent
    5. fill Remote File System Root - /home/jenkins
 10. trigger build with Poll SCM - fill in `H */5 * * *` (checks git for changes in every 5 minutes at a random minute)
-11.
+11. create image with Dockerfile.agent to run python scripts, add docker agent template. Push your image on dockerhub, or select "Never pull" as Pull strategy and Jenkins will pull image from local docker host instead of docker hub.
